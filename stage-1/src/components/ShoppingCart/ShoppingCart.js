@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './ShoppingCart.css';
 
 class ShoppingCart extends Component {
-    costructor(props) {
+    constructor(props) {
         super(props);
-
         this.state = {
-            shoppingCart: this.props.shoppingCart
+            shoppingCart: this.props.shoppingCart,
+            test: 'jordan'
         }
     }
 
@@ -31,11 +31,12 @@ class ShoppingCart extends Component {
                 </div>
             )
         })
+        console.log('shopping cart: ',shoppingCartDisplay);
         return (
             <div className="shopping-cart-container">
                 {shoppingCartDisplay[0] ? 
                 shoppingCartDisplay
-                : <div className="go-buy-something"><h1>Your shopping cart is empty!  Go buy something!</h1></div>}
+                : <div className="go-buy-something"><h1>Your shopping cart is empty!  Go buy something! TEST</h1></div>}
             </div>
         )
     }

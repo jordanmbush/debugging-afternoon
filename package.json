@@ -1,0 +1,8 @@
+{
+  "name": "debugging-afternoon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jordanmbush/debugging-afternoon.git",
+  "author": "<jordanmbush@gmail.com>",
+  "license": "MIT"
+}

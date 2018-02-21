@@ -9,10 +9,10 @@ import store from './redux/store';
 
 ReactDOM.render(
 
-    <Provider>
-        <HashRouter>
+    <HashRouter>
+        <Provider store={store}>
             <App />
-        </HashRouter>
-    </Provider>
+        </Provider>
+    </HashRouter>
     , document.getElementById('root'));
 registerServiceWorker();

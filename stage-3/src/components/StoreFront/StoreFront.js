@@ -4,7 +4,12 @@ import { connect } from 'react-redux';
 import { addToShoppingCart, getAllProducts } from '../../redux/reducer';
 
 class StoreFront extends Component {
+    constructor() {
+        super();
+        this.state = {
 
+        }
+    }
     componentDidMount() {
         this.props.getAllProducts();
     }
@@ -30,11 +35,8 @@ class StoreFront extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        products: state.products,
-        loading: state.loading,
-    }
-}
+const mapStateToProps = state => ({ products: state.products, loading: state.loading });
 
-export default connect(mapStateToProps, {addToShoppingCart, getAllProducts})(StoreFront);
+
+
+export default connect(mapStateToProps , {addToShoppingCart, getAllProducts})(StoreFront);

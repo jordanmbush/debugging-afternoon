@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   removeFromShoppingCart(product) {
-    let newShoppingCart = this.state.shoppingCart;
+    let newShoppingCart = Object.assign({}, this.state.shoppingCart);
     newShoppingCart.splice(newShoppingCart.indexOf(product), 1);
     this.setState({
       shoppingCart: newShoppingCart
